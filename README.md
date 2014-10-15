@@ -31,4 +31,4 @@ Screenshots
 
 ![Screen 2](https://raw.githubusercontent.com/ajmauricio/LibNovaSunriseAndSunsetCalculator/master/screen2.png)
 
-![Screen 3](https://raw.githubusercontent.com/ajmauricio/LibNovaSunriseAndSunsetCalculator/master/screen1.png)
+![Screen 3](https://raw.githubusercontent.com/ajmauricio/LibNovaSunriseAndSunsetCalculator/master/screen3.png)
