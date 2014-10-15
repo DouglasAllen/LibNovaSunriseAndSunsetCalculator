@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Sunrise Cities Table View - Pick a City-->
+        <scene sceneID="maQ-pD-cj4">
+            <objects>
+                <tableViewController id="sms-NT-2im" customClass="SunriseCitiesTableView" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="0lu-9c-TYJ">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MyCell" textLabel="dOA-jC-OdE" detailTextLabel="Wed-uH-rLZ" style="IBUITableViewCellStyleSubtitle" id="f66-6n-IOu">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOA-jC-OdE">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wed-uH-rLZ">
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <segue destination="mY6-3u-xSw" kind="push" identifier="detailSegue" id="ITN-K2-y7Y"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Pick a City" id="Y83-EG-G9e"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sJz-9V-HXE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1201" y="571"/>
+        </scene>
+        <!--Sunrise Detail View Controller-->
+        <scene sceneID="Zdy-8E-Bk2">
+            <objects>
+                <viewController id="mY6-3u-xSw" customClass="SunriseDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n5O-u6-1Vs">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Official Sunrise" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lr3-gg-xp8">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Official Sunset" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Na0-Uk-Plm">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="112" id="QsZ-gw-6Mp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Nautical Sunrise" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vaz-RH-GEv">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Nautical Sunset" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ur4-6o-gVQ">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Astro Sunrise" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oAE-lB-mM8">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Astro Sunset" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yPN-lR-47l">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Civil Sunrise" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zvi-lU-neW">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Civil Sunset" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3W6-au-y7r">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="officialSunrise" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hx-Yy-oiw">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="106" id="9Sq-Cq-3Mg"/>
+                                    <constraint firstAttribute="height" constant="21" id="QNq-JJ-iiI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="officialSunset" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6x-9I-WxR">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="102" id="XUm-LR-kfF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="nauticalSunrise" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLb-Xy-ztZ">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="117" id="mvw-FE-cz7"/>
+                                    <constraint firstAttribute="height" constant="21" id="zEH-yp-2ln"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="nauticalSunset" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVx-ql-9EN">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="FWI-Hd-FqR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="astroSunrise" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWo-ZK-7KQ">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="PzL-kv-5Vu"/>
+                                    <constraint firstAttribute="width" constant="96" id="koH-Lq-zOs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="astroSunset" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fz6-qy-UWo">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="83" id="ypM-XE-okj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="civilSunrise" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVR-uI-Wqz">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="W3A-Hb-mbg"/>
+                                    <constraint firstAttribute="width" constant="86" id="m3w-yH-kcf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="civilSunset" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3v-31-C7a">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="W3D-dS-8bL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sunrise and Sunsets for Selected City" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="157" translatesAutoresizingMaskIntoConstraints="NO" id="xls-jX-OIo">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fz6-qy-UWo" firstAttribute="baseline" secondItem="CWo-ZK-7KQ" secondAttribute="baseline" type="default" id="0AG-10-3Sd"/>
+                            <constraint firstItem="lr3-gg-xp8" firstAttribute="top" secondItem="n5O-u6-1Vs" secondAttribute="top" constant="89" id="2Am-3J-Xre"/>
+                            <constraint firstItem="c6x-9I-WxR" firstAttribute="top" secondItem="4hx-Yy-oiw" secondAttribute="top" type="default" id="2uj-yt-YdQ"/>
+                            <constraint firstItem="fz6-qy-UWo" firstAttribute="top" secondItem="CWo-ZK-7KQ" secondAttribute="top" type="default" id="4bi-QR-ZC4"/>
+                            <constraint firstItem="c6x-9I-WxR" firstAttribute="trailing" secondItem="ur4-6o-gVQ" secondAttribute="trailing" type="default" id="5JM-Ph-5pG"/>
+                            <constraint firstItem="c6x-9I-WxR" firstAttribute="baseline" secondItem="4hx-Yy-oiw" secondAttribute="baseline" type="default" id="AyT-kD-mf7"/>
+                            <constraint firstItem="Zvi-lU-neW" firstAttribute="leading" secondItem="n5O-u6-1Vs" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Eh8-fa-q6j"/>
+                            <constraint firstItem="ur4-6o-gVQ" firstAttribute="trailing" secondItem="fVx-ql-9EN" secondAttribute="trailing" type="default" id="FY6-MS-a0u"/>
+                            <constraint firstItem="CWo-ZK-7KQ" firstAttribute="leading" secondItem="n5O-u6-1Vs" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Gfx-YN-gZg"/>
+                            <constraint firstItem="P3v-31-C7a" firstAttribute="trailing" secondItem="3W6-au-y7r" secondAttribute="trailing" type="default" id="H3q-cN-dxm"/>
+                            <constraint firstItem="c6x-9I-WxR" firstAttribute="trailing" secondItem="Na0-Uk-Plm" secondAttribute="trailing" type="default" id="Inc-GA-RtP"/>
+                            <constraint firstItem="3W6-au-y7r" firstAttribute="baseline" secondItem="Zvi-lU-neW" secondAttribute="baseline" type="default" id="K5h-wP-a72"/>
+                            <constraint firstItem="bVR-uI-Wqz" firstAttribute="leading" secondItem="n5O-u6-1Vs" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="KBz-AG-Tlf"/>
+                            <constraint firstItem="oAE-lB-mM8" firstAttribute="leading" secondItem="n5O-u6-1Vs" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="M1F-Dg-3lu"/>
+                            <constraint firstAttribute="bottom" secondItem="bVR-uI-Wqz" secondAttribute="bottom" constant="67" id="RtR-fV-COf"/>
+                            <constraint firstAttribute="bottom" secondItem="oAE-lB-mM8" secondAttribute="bottom" constant="144" id="U1T-PD-VMv"/>
+                            <constraint firstAttribute="bottom" secondItem="CWo-ZK-7KQ" secondAttribute="bottom" constant="123" id="U3t-57-4LF"/>
+                            <constraint firstAttribute="trailing" secondItem="fz6-qy-UWo" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Vsy-KK-87K"/>
+                            <constraint firstItem="mLb-Xy-ztZ" firstAttribute="top" secondItem="n5O-u6-1Vs" secondAttribute="top" constant="168" id="XQW-f5-2Zd"/>
+                            <constraint firstItem="Vaz-RH-GEv" firstAttribute="top" secondItem="n5O-u6-1Vs" secondAttribute="top" constant="148" id="a15-I5-iAW"/>
+                            <constraint firstItem="P3v-31-C7a" firstAttribute="top" secondItem="bVR-uI-Wqz" secondAttribute="top" type="default" id="dAj-1P-ia9"/>
+                            <constraint firstItem="xls-jX-OIo" firstAttribute="centerX" secondItem="n5O-u6-1Vs" secondAttribute="centerX" type="default" id="dRe-DH-vhE"/>
+                            <constraint firstItem="P3v-31-C7a" firstAttribute="baseline" secondItem="bVR-uI-Wqz" secondAttribute="baseline" type="default" id="dvS-sg-uSh"/>
+                            <constraint firstItem="4hx-Yy-oiw" firstAttribute="top" secondItem="n5O-u6-1Vs" secondAttribute="top" constant="112" id="fg2-Yb-qj3"/>
+                            <constraint firstItem="Vaz-RH-GEv" firstAttribute="leading" secondItem="n5O-u6-1Vs" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="gI7-8f-u06"/>
+                            <constraint firstItem="lr3-gg-xp8" firstAttribute="leading" secondItem="n5O-u6-1Vs" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="ggn-DG-4FN"/>
+                            <constraint firstItem="lr3-gg-xp8" firstAttribute="baseline" secondItem="Na0-Uk-Plm" secondAttribute="baseline" type="default" id="kHA-Kb-yxv"/>
+                            <constraint firstItem="ur4-6o-gVQ" firstAttribute="baseline" secondItem="Vaz-RH-GEv" secondAttribute="baseline" type="default" id="kp0-54-z7x"/>
+                            <constraint firstItem="4hx-Yy-oiw" firstAttribute="leading" secondItem="n5O-u6-1Vs" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="mzH-dO-RdL"/>
+                            <constraint firstItem="mLb-Xy-ztZ" firstAttribute="leading" secondItem="n5O-u6-1Vs" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="nW2-ry-IRh"/>
+                            <constraint firstItem="fVx-ql-9EN" firstAttribute="trailing" secondItem="yPN-lR-47l" secondAttribute="trailing" type="default" id="oOo-i1-gdM"/>
+                            <constraint firstAttribute="trailing" secondItem="3W6-au-y7r" secondAttribute="trailing" constant="18" id="rB4-U2-TB6"/>
+                            <constraint firstItem="yPN-lR-47l" firstAttribute="trailing" secondItem="3W6-au-y7r" secondAttribute="trailing" type="default" id="rGE-Is-Hhj"/>
+                            <constraint firstItem="xls-jX-OIo" firstAttribute="top" secondItem="n5O-u6-1Vs" secondAttribute="top" constant="20" symbolic="YES" type="default" id="t9F-14-F5R"/>
+                            <constraint firstItem="yPN-lR-47l" firstAttribute="baseline" secondItem="oAE-lB-mM8" secondAttribute="baseline" type="default" id="wD6-OU-dAS"/>
+                            <constraint firstItem="fVx-ql-9EN" firstAttribute="leading" secondItem="Na0-Uk-Plm" secondAttribute="leading" type="default" id="wXe-DX-dIQ"/>
+                            <constraint firstAttribute="bottom" secondItem="Zvi-lU-neW" secondAttribute="bottom" constant="90" id="xCC-0D-Ljn"/>
+                            <constraint firstItem="fVx-ql-9EN" firstAttribute="top" secondItem="n5O-u6-1Vs" secondAttribute="top" constant="170" id="zKH-eX-MSg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="S50-We-Vgx"/>
+                    <connections>
+                        <outlet property="astroSunrise" destination="CWo-ZK-7KQ" id="OK3-Sn-Ugf"/>
+                        <outlet property="astroSunset" destination="fz6-qy-UWo" id="zgX-7T-qUa"/>
+                        <outlet property="civilSunrise" destination="bVR-uI-Wqz" id="9Zh-4e-T4I"/>
+                        <outlet property="civilSunset" destination="P3v-31-C7a" id="6G8-BC-5yw"/>
+                        <outlet property="nauticalSunrise" destination="mLb-Xy-ztZ" id="rQI-bE-bAY"/>
+                        <outlet property="nauticalSunset" destination="fVx-ql-9EN" id="VdZ-Uf-pvN"/>
+                        <outlet property="officialSunrise" destination="4hx-Yy-oiw" id="DHB-l9-oMY"/>
+                        <outlet property="officialSunset" destination="c6x-9I-WxR" id="b1B-ls-qCv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Was-wl-9Wf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1739" y="571"/>
+        </scene>
+        <!--Navigation Controller - Pick City From Table-->
+        <scene sceneID="d5U-2e-WL3">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="8YT-nc-VbO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Pick City From Table" id="WRB-HK-Krk"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HO1-SF-mcH">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="sms-NT-2im" kind="relationship" relationship="rootViewController" id="H5w-SB-t38"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zJP-vF-d3B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="667" y="571"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="15">
+            <objects>
+                <tabBarController id="4" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="5">
+                        <rect key="frame" x="0.0" y="431" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="8YT-nc-VbO" kind="relationship" relationship="viewControllers" id="XCZ-od-Smh"/>
+                        <segue destination="Rpd-3L-68e" kind="relationship" relationship="viewControllers" id="KFD-fW-Mxo"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="180"/>
+        </scene>
+        <!--First View Controller - GPS Location-->
+        <scene sceneID="HSw-V7-NPh">
+            <objects>
+                <viewController id="Rpd-3L-68e" customClass="FirstViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LRV-MR-A93">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Official Sunrise" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxF-yN-fah">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Official Sunset" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eaK-Lt-uQL">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="112" id="JHs-qH-DPy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Nautical Sunrise" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zoK-sg-prB">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Nautical Sunset" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRW-Ns-Qrz">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Astro Sunrise" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qvZ-ZM-6ou">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Astro Sunset" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjm-t6-2CJ">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Civil Sunrise" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3YC-TZ-A4e">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Civil Sunset" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WeG-g0-MPc">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="officialSunrise" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0d4-j6-7ee">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="106" id="aHY-jT-FI7"/>
+                                    <constraint firstAttribute="height" constant="21" id="bbV-Lg-Qbd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="officialSunset" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3t-Xr-1EO">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="102" id="WJi-qN-UE0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="nauticalSunrise" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lyW-B7-Puh">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="q10-JM-uFc"/>
+                                    <constraint firstAttribute="width" constant="117" id="tHh-8k-hGF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="nauticalSunset" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xzf-7n-Xa6">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="qbo-Vh-VxN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="astroSunrise" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHQ-MO-NfH">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="A8Y-Ih-5fx"/>
+                                    <constraint firstAttribute="height" constant="21" id="vmt-5I-aS8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="astroSunset" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNH-Je-PqN">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="83" id="eXV-fB-LAj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="civilSunrise" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24N-jO-XWf">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ZLH-Xf-7fR"/>
+                                    <constraint firstAttribute="width" constant="86" id="lJn-z1-WKH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="civilSunset" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMK-r6-C8P">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="Ubq-C4-5q1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sunrise and Sunsets for Current Location" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="157" translatesAutoresizingMaskIntoConstraints="NO" id="a3C-fK-hs1">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="lonLat" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23E-0v-SOt">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yNH-Je-PqN" firstAttribute="trailing" secondItem="WeG-g0-MPc" secondAttribute="trailing" type="default" id="2M6-ye-eOe"/>
+                            <constraint firstItem="yNH-Je-PqN" firstAttribute="baseline" secondItem="jHQ-MO-NfH" secondAttribute="baseline" type="default" id="2Qn-mQ-Ebd"/>
+                            <constraint firstItem="xxF-yN-fah" firstAttribute="top" secondItem="LRV-MR-A93" secondAttribute="top" constant="89" id="425-ra-y55"/>
+                            <constraint firstItem="0d4-j6-7ee" firstAttribute="leading" secondItem="zoK-sg-prB" secondAttribute="leading" type="default" id="5Ip-rs-qFG"/>
+                            <constraint firstAttribute="bottom" secondItem="24N-jO-XWf" secondAttribute="bottom" constant="111" id="7zx-v7-dAG"/>
+                            <constraint firstItem="qvZ-ZM-6ou" firstAttribute="top" secondItem="LRV-MR-A93" secondAttribute="top" constant="202" id="9hc-i4-loF"/>
+                            <constraint firstItem="jHQ-MO-NfH" firstAttribute="leading" secondItem="3YC-TZ-A4e" secondAttribute="leading" type="default" id="CIa-VL-5Lp"/>
+                            <constraint firstItem="xxF-yN-fah" firstAttribute="baseline" secondItem="eaK-Lt-uQL" secondAttribute="baseline" type="default" id="GlZ-Ef-0sx"/>
+                            <constraint firstItem="24N-jO-XWf" firstAttribute="top" secondItem="RMK-r6-C8P" secondAttribute="top" type="default" id="Hc8-U3-LiN"/>
+                            <constraint firstAttribute="trailing" secondItem="yNH-Je-PqN" secondAttribute="trailing" constant="19" id="IZ7-C4-pjm"/>
+                            <constraint firstItem="23E-0v-SOt" firstAttribute="centerX" secondItem="a3C-fK-hs1" secondAttribute="centerX" type="default" id="JSN-aO-8kM"/>
+                            <constraint firstItem="a3C-fK-hs1" firstAttribute="top" secondItem="LRV-MR-A93" secondAttribute="top" constant="20" symbolic="YES" type="default" id="MJm-2U-PbF"/>
+                            <constraint firstItem="zoK-sg-prB" firstAttribute="top" secondItem="LRV-MR-A93" secondAttribute="top" constant="148" id="Nc9-nE-pyZ"/>
+                            <constraint firstItem="eaK-Lt-uQL" firstAttribute="leading" secondItem="Xzf-7n-Xa6" secondAttribute="leading" type="default" id="PLB-2W-Uqv"/>
+                            <constraint firstItem="yNH-Je-PqN" firstAttribute="top" secondItem="jHQ-MO-NfH" secondAttribute="top" type="default" id="PRu-Zp-DfB"/>
+                            <constraint firstItem="A3t-Xr-1EO" firstAttribute="trailing" secondItem="eRW-Ns-Qrz" secondAttribute="trailing" type="default" id="QGc-Hy-dmf"/>
+                            <constraint firstItem="xxF-yN-fah" firstAttribute="leading" secondItem="0d4-j6-7ee" secondAttribute="leading" type="default" id="RKE-u5-jkn"/>
+                            <constraint firstItem="qvZ-ZM-6ou" firstAttribute="baseline" secondItem="fjm-t6-2CJ" secondAttribute="baseline" type="default" id="Tg2-7W-r2h"/>
+                            <constraint firstItem="0d4-j6-7ee" firstAttribute="baseline" secondItem="A3t-Xr-1EO" secondAttribute="baseline" type="default" id="ThF-X7-IIF"/>
+                            <constraint firstItem="24N-jO-XWf" firstAttribute="baseline" secondItem="RMK-r6-C8P" secondAttribute="baseline" type="default" id="UzL-aC-zeF"/>
+                            <constraint firstItem="RMK-r6-C8P" firstAttribute="trailing" secondItem="WeG-g0-MPc" secondAttribute="trailing" type="default" id="VMW-LO-K4D"/>
+                            <constraint firstItem="jHQ-MO-NfH" firstAttribute="leading" secondItem="qvZ-ZM-6ou" secondAttribute="leading" type="default" id="VlW-zu-7qs"/>
+                            <constraint firstItem="A3t-Xr-1EO" firstAttribute="top" secondItem="0d4-j6-7ee" secondAttribute="top" type="default" id="Vr4-cr-V1s"/>
+                            <constraint firstItem="lyW-B7-Puh" firstAttribute="top" secondItem="LRV-MR-A93" secondAttribute="top" constant="168" id="XMY-Er-Wrk"/>
+                            <constraint firstItem="Xzf-7n-Xa6" firstAttribute="trailing" secondItem="fjm-t6-2CJ" secondAttribute="trailing" type="default" id="XOM-zb-awZ"/>
+                            <constraint firstItem="xxF-yN-fah" firstAttribute="leading" secondItem="LRV-MR-A93" secondAttribute="leading" constant="19" id="brA-1p-lS6"/>
+                            <constraint firstItem="Xzf-7n-Xa6" firstAttribute="top" secondItem="LRV-MR-A93" secondAttribute="top" constant="170" id="eXm-ay-gHf"/>
+                            <constraint firstItem="yNH-Je-PqN" firstAttribute="trailing" secondItem="fjm-t6-2CJ" secondAttribute="trailing" type="default" id="f6T-nD-oBY"/>
+                            <constraint firstAttribute="bottom" secondItem="23E-0v-SOt" secondAttribute="bottom" constant="42" id="g79-YL-pJ7"/>
+                            <constraint firstAttribute="bottom" secondItem="3YC-TZ-A4e" secondAttribute="bottom" constant="134" id="htT-in-h3x"/>
+                            <constraint firstItem="eRW-Ns-Qrz" firstAttribute="trailing" secondItem="Xzf-7n-Xa6" secondAttribute="trailing" type="default" id="i0m-vw-ab4"/>
+                            <constraint firstItem="3YC-TZ-A4e" firstAttribute="leading" secondItem="24N-jO-XWf" secondAttribute="leading" type="default" id="iIe-lj-Nod"/>
+                            <constraint firstItem="lyW-B7-Puh" firstAttribute="leading" secondItem="zoK-sg-prB" secondAttribute="leading" type="default" id="ikP-ug-sgC"/>
+                            <constraint firstAttribute="bottom" secondItem="jHQ-MO-NfH" secondAttribute="bottom" constant="167" id="mOs-xo-6nM"/>
+                            <constraint firstItem="zoK-sg-prB" firstAttribute="baseline" secondItem="eRW-Ns-Qrz" secondAttribute="baseline" type="default" id="onN-57-UAy"/>
+                            <constraint firstItem="3YC-TZ-A4e" firstAttribute="baseline" secondItem="WeG-g0-MPc" secondAttribute="baseline" type="default" id="qXe-DG-yXp"/>
+                            <constraint firstItem="a3C-fK-hs1" firstAttribute="leading" secondItem="LRV-MR-A93" secondAttribute="leading" constant="81" id="sWe-tN-pDd"/>
+                            <constraint firstItem="0d4-j6-7ee" firstAttribute="top" secondItem="LRV-MR-A93" secondAttribute="top" constant="112" id="wwU-5R-O8B"/>
+                            <constraint firstItem="A3t-Xr-1EO" firstAttribute="trailing" secondItem="eaK-Lt-uQL" secondAttribute="trailing" type="default" id="y3F-Fg-4VU"/>
+                            <constraint firstItem="qvZ-ZM-6ou" firstAttribute="leading" secondItem="lyW-B7-Puh" secondAttribute="leading" type="default" id="zif-ge-Sa3"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="GPS Location" id="xAd-50-S5t"/>
+                    <navigationItem key="navigationItem" id="CZj-1n-tyt"/>
+                    <connections>
+                        <outlet property="astroSunrise" destination="jHQ-MO-NfH" id="ILE-W0-m5Q"/>
+                        <outlet property="astroSunset" destination="yNH-Je-PqN" id="ULc-hU-1ee"/>
+                        <outlet property="civilSunrise" destination="24N-jO-XWf" id="uLY-o8-UJe"/>
+                        <outlet property="civilSunset" destination="RMK-r6-C8P" id="eDP-hG-DvA"/>
+                        <outlet property="lonLatLabel" destination="23E-0v-SOt" id="slH-04-bho"/>
+                        <outlet property="nauticalSunrise" destination="lyW-B7-Puh" id="vaM-GM-PUH"/>
+                        <outlet property="nauticalSunset" destination="Xzf-7n-Xa6" id="gHE-aD-DOJ"/>
+                        <outlet property="officialSunrise" destination="0d4-j6-7ee" id="XtH-MW-LPX"/>
+                        <outlet property="officialSunset" destination="A3t-Xr-1EO" id="9lf-2d-Owe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s7L-vC-i6K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="687" y="-108"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="CLLocationManager" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CLLocationManager.h"/>
+        </class>
+        <class className="FirstViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FirstViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="astroSunrise" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="astroSunset" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="civilSunrise" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="civilSunset" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="locationManager" candidateClass="CLLocationManager"/>
+                <relationship kind="outlet" name="lonLatLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nauticalSunrise" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nauticalSunset" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="officialSunrise" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="officialSunset" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SunriseCitiesTableView" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SunriseCitiesTableView.h"/>
+        </class>
+        <class className="SunriseDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SunriseDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="astroSunrise" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="astroSunset" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="civilSunrise" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="civilSunset" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nauticalSunrise" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nauticalSunset" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="officialSunrise" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="officialSunset" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="sunriseTest" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
