@@ -1,0 +1,4 @@
+C:/Users/kb9agt/github/C-lang/libNovaSunriseAndSunsetCalculator/libnova/CMakeFiles//src//julian_day.h.dir
+C:/Users/kb9agt/github/C-lang/libNovaSunriseAndSunsetCalculator/libnova/CMakeFiles/INSTALL.dir
+C:/Users/kb9agt/github/C-lang/libNovaSunriseAndSunsetCalculator/libnova/CMakeFiles/ALL_BUILD.dir
+C:/Users/kb9agt/github/C-lang/libNovaSunriseAndSunsetCalculator/libnova/CMakeFiles/ZERO_CHECK.dir
